@@ -30,5 +30,3 @@ class Solution:
             newList.append(s)
         return (max(newList))
 
-
-    	
