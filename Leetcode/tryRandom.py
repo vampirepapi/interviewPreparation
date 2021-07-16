@@ -1,8 +1,14 @@
-l=[]
-k=[]
-m=[]
+def findMinMax(arr):
+    max=min = arr[0]
 
-arr=[0,2,1,2,2,1,0,0,2,2]
+    for x in range(len(arr)):
+        if arr[x] > max:
+            max = arr[x]
 
-for x in arr:
-    print(x)
+        elif arr[x] < min:
+            min = arr[x]
+    return max , min
+
+print(findMinMax([5,9]))
+
+
