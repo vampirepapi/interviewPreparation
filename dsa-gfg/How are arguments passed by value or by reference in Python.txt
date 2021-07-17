@@ -1,0 +1,26 @@
+Python uses a mechanism, which is known as "Call-by-Object", sometimes also called "Call by Object Reference" or "Call by Sharing"
+
+
+If you pass immutable arguments like integers, strings or tuples to a function, the passing acts like Call-by-value. It's different, if we pass mutable arguments.Means copy is created.
+
+
+All parameters (arguments) in the Python language are passed by reference. It means if you change what a parameter refers to within a function, the change also reflects back in the calling function.Means actual values is passed
+
+
+
+Example:-
+
+student={'Archana':28,'krishna':25,'Ramesh':32,'vineeth':25}
+def test(student):
+   new={'alok':30,'Nevadan':28}
+   student.update(new)
+   print("Inside the function",student)
+   return
+test(student)
+print("outside the function:",student)
+
+
+Output:-
+
+Inside the function {'Archana': 28, 'krishna': 25, 'Ramesh': 32, 'vineeth': 25, 'alok': 30, 'Nevadan': 28}
+outside the function: {'Archana': 28, 'krishna': 25, 'Ramesh': 32, 'vineeth': 25, 'alok': 30, 'Nevadan': 28}
