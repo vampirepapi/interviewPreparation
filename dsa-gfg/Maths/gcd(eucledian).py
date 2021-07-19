@@ -36,3 +36,4 @@ def gcd (a,b):
 
 print(gcd(4, 20))
   
+#TC = log(min(a,b))

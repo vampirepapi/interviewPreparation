@@ -12,4 +12,9 @@ def gcd(a,b):
 def lcm(a,b):
   return (a*b)//gcd(a,b)
 
-print(lcm(12,60))
+print(lcm(2,5))
+
+
+# TC = gcd TC i.e log(min(a,b)) + some theta constant work for lcm return
+# so,   
+# TC  = O(log(min(a,b)))
