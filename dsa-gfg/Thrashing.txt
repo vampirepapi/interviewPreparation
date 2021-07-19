@@ -1,0 +1,5 @@
+In computer science, thrashing occurs when a computer's virtual memory resources are overused, leading to a constant state of paging and page faults, inhibiting most application-level processing. This causes the performance of the computer to degrade or collapse
+
+TL;DR
+
+A page fault occurs when a program attempts to access a block of memory that is not stored in the physical memory, or RAM
