@@ -1,3 +1,5 @@
+#Quick sort approach:-
+
 def qsort(arr):
 	if len(arr) <= 1:
 		return arr
@@ -22,3 +24,9 @@ def qsort(arr):
 
 
 print(qsort([-1, 2, -3, 4, 5, 6, -7, 8, 9]))
+
+# TC(worst case) = as we used quick sort here so out TC will br:
+# 			= O(n**2)
+
+
+#Best Approach:-
