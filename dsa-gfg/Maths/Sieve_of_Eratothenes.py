@@ -15,27 +15,27 @@ def SieveofEratothenes(n):
             print(i,end=" ")
 
 
-genprimes(150)
+SieveofEratothenes(150)
 
 #TC = O(nloglog(n))
 
 
-#Basic Approach:-
-def isPrime(n):
-  if n==1:
-    return False
-  for x in range(2,(n//2)+1):
-    if n%x==0:
-      return False
+# #Basic Approach:-
+# def isPrime(n):
+#   if n==1:
+#     return False
+#   for x in range(2,(n//2)+1):
+#     if n%x==0:
+#       return False
 
-  return True
+#   return True
 
-def printPrimes(y):
-	for x in range(1,y+1):
-		if isPrime(x):
-			print(x,end=' ')
+# def printPrimes(y):
+# 	for x in range(1,y+1):
+# 		if isPrime(x):
+# 			print(x,end=' ')
 
-printPrimes(10)
+# printPrimes(10)
 
-#TC = O(n*n)
+# #TC = O(n*n)
 

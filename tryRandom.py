@@ -1,35 +1,28 @@
-#Basic Approach:-
-def isPrime(n):
-  if n==1:
-    return False
-  for x in range(2,(n//2)+1):
-    if n%x==0:
-      return False
+# Python implementation of the above approach
+def check(s):
 
+  # creating a frequency array
+  freq =[0]*26
+
+  # Finding length of s
+  n = len(s)
+
+  for i in range(n):
+
+    # counting frequency of all characters
+    freq[ord(s[i])-97]+= 1
+
+  for i in range(26):
+
+    # checking if any odd frequency
+    # is there or not
+    if (freq[i]% 2 == 1):
+      return False
   return True
 
-for x in range(1,50):
-  print(x,isPrime(x))
-
-# TC = loop will run (n/2) times in worst case
-#  so, TC = O(n)
-
-
-#Optimized Approach:-
-def isPrime(n):
-  if n==1:
-    return False
-  for x in range(2,int(n**(1/2))+1):
-    if n%x==0:
-      return False
-
-  return True
-
-for x in range(1,50):
-  print(x,isPrime(x))
-
-#TC = O(root(n))
-
-
-#More Optimized Approach:-
-
+# Driver code
+s ="vvvvvvvvvvvvvvvvvvv"
+if(check(s)):
+  print("Yes")
+else:
+  print("No")
