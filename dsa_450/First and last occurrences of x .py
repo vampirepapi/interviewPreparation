@@ -14,18 +14,18 @@
 # Expected Auxiliary Space: O(1)
 
 #Naive Approach
-# arr=[1, 2, 2, 2, 2, 3, 4, 7, 8, 8]
-# x=8
-# first_idx = -1
-# last_idx = -1
+arr=[1, 2, 2, 2, 2, 3, 4, 7, 8, 8]
+x=8
+first_idx = -1
+last_idx = -1
 
-# for i in range(len(arr)):
-#     if arr[i] == x:
-#         if first_idx == -1:
-#             first_idx =i
+for i in range(len(arr)):
+    if arr[i] == x:
+        if first_idx == -1:
+            first_idx =i
 
-#         last_idx =i
-# print(first_idx, last_idx)
+        last_idx =i
+print(first_idx, last_idx)
 
 # Time Complexity: O(n) 
 # Auxiliary Space: O(1)
