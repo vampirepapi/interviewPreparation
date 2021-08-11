@@ -24,6 +24,7 @@ class Linkedlist:
 			itr = itr.next
 
 		print(llstr) 
+
 	def insert_at_end(self,data):
 		if self.head is None:
 			node = Node(data, None)
@@ -38,15 +39,23 @@ class Linkedlist:
 
 		itr.next = Node(data, None)
 
+	def insert_values(self, data_list):
+		self.head = None
+
+		for data in data_list:
+			self.insert_at_end(data)
+
 
 
 
 
 if __name__ == '__main__':
 	ll = Linkedlist()
-	ll.insert_at_begining(5)
-	ll.insert_at_begining(89)
-	ll.insert_at_end(15)
-	ll.insert_at_end(11)
-	ll.insert_at_begining(54)
+	# ll.insert_at_begining(5)
+	# ll.insert_at_begining(89)
+	# ll.insert_at_end(15)
+	# ll.insert_at_end(11)
+	# ll.insert_at_begining(54)
+	ll.insert_values([1,2,3,4,5,6])
+	# ll.insert_values(['shubham','anish','himanshu'])
 	ll.print()
