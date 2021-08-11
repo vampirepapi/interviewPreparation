@@ -84,6 +84,7 @@ class Linkedlist:
 				break
 
 			itr = itr.next
+			count+=1
 
 
 
@@ -94,9 +95,9 @@ if __name__ == '__main__':
 	# ll.insert_at_end(15)
 	# ll.insert_at_end(11)
 	# ll.insert_at_begining(54)
-	ll.insert_values([1,2,3,4,5,6])
-	# ll.insert_values(['shubham','anish','himanshu'])
+	#ll.insert_values([1,2,3,4,5,6])
+	ll.insert_values(['shubham','anish','himanshu'])
 	#ll.print()
 	print("Length:", ll.get_length())
-	ll.remove_at(1)
+	ll.remove_at(2)
 	ll.print()
