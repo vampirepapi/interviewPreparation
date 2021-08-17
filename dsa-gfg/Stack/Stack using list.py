@@ -1,4 +1,7 @@
 #using list to implement stack
+
+#resource link:-https://github.com/codebasics/data-structures-algorithms-python/blob/master/data_structures/5_Stack/5_stack.ipynb
+
 s=[]
 s.append("google.com")
 s.append("google.com/china")
