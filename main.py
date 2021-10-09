@@ -22,11 +22,22 @@
 # print(p.mctFromLeafValues([5,3,1]))
 #     
 
-def solution(input_from_question):
-	if input_from_question>12 or input_from_question<0:
-		return 0
-	else:
-		return ((input_from_question*(input_from_question+1))//2)**2
+# def solution(input_from_question):
+# 	if input_from_question>12 or input_from_question<0:
+# 		return 0
+# 	else:
+# 		return ((input_from_question*(input_from_question+1))//2)**2
 
-print(solution(input_from_question))
+# print(solution(input_from_question))
 
+array = [12, 3]
+
+num_special = 0
+
+for item in array:
+  for num in range(1, item):
+    if (num + int(str(num)[::-1]) == item):
+      num_special += 1
+      break
+
+print(num_special)
