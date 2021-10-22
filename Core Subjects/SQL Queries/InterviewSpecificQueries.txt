@@ -1,0 +1,8 @@
+insert into students
+values(56, "raghva", "15034");
+
+--max_salary
+select max(salary) from employee;
+
+--second highest max_salary
+select max(salary) from employee where salary < (select max(salary) from employee)

@@ -43,3 +43,13 @@
 # print(num_special)
 
 
+def unaffectedChar(dataStream):
+	newStr = dataStream[::-1]
+	n=len(newStr)
+	c=0
+	for i in range(n):
+		if dataStream[i]==newStr[i]:
+			c+=1
+	return c
+
+print(unaffectedChar("alphxxdida"))
