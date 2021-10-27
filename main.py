@@ -1,55 +1,27 @@
-# # class Solution(object):
-# #    def mctFromLeafValues(self, arr):
-# #       """
-# #       :type arr: List[int]
-# #       :rtype: int
-# #       """
-# #       self. memo = {}
-# #       def dp(i,j):
-# #          if j<=i:
-# #             return 0
-# #          if (i,j) in self.memo:
-# #             return self.memo[(i,j)]
-# #          res = float('inf')
-# #          for k in range(i,j):
-# #             res = min(res,dp(i,k) + dp(k+1,j) + (max(arr[i:k+1])*max(arr[k+1:j+1])))
-# #          self.memo[(i,j)]=res
-# #          return self.memo[(i,j)]
-# #       return dp(0,len(arr)-1)
 
+def minSwaps(arr):
+    n = len(arr)
+    arrpos = [*enumerate(arr)]
+    arrpos.sort(key = lambda it : it[1])
+    vis = {k : False for k in range(n)}
+    ans = 0
+    for i in range(n):
+        if vis[i] or arrpos[i][0] == i:
+            continue
+        cycle_size = 0
+        j = i
+        
+        while not vis[j]:
+            
+            vis[j] = True
+            
+            j = arrpos[j][0]
+            cycle_size += 1 
+        if cycle_size > 0:
+            ans += (cycle_size - 1)
+    return ans  
+arr = [3,2,1,4]
+print(minSwaps(arr))
 
-# # p=Solution()
-# # print(p.mctFromLeafValues([5,3,1]))
-# #     
-
-# # def solution(input_from_question):
-# # 	if input_from_question>12 or input_from_question<0:
-# # 		return 0
-# # 	else:
-# # 		return ((input_from_question*(input_from_question+1))//2)**2
-
-# # print(solution(input_from_question))
-
-# array = [12, 3]
-
-# num_special = 0
-
-# for item in array:
-#   for num in range(1, item):
-#     if (num + int(str(num)[::-1]) == item):
-#       num_special += 1
-#       break
-
-# print(num_special)
-
-
-def unaffectedChar(dataStream):
-	newStr = dataStream[::-1]
-	n=len(newStr)
-	c=0
-	for i in range(n):
-		if dataStream[i]==newStr[i]:
-			c+=1
-	return c
-
-print(unaffectedChar("alphxxdida"))
+# This code is contributed
+# by Dharan Aditya
