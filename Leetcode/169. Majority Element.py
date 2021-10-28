@@ -24,10 +24,22 @@
 # Output: 2
 
 #Solution1
+# class Solution:
+#     def majorityElement(self, nums: List[int]) -> int:
+#         nums.sort()
+#         return nums[len(nums)//2]
+
+# p=Solution()
+# print(p.majorityElement([3,2,3]))
+
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        nums.sort()
-        return nums[len(nums)//2]
-
-p=Solution()
-print(p.majorityElement([3,2,3]))
+        d={}
+        for i in nums:
+            if i in d:
+                d[i]+=1
+            else:
+                d[i]=1
+        for i in d:
+            if d[i]>len(nums)//2:
+                return i
