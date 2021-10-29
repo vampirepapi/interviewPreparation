@@ -1,0 +1,11 @@
+a=int(input())
+b=int(input())
+c=int(input())
+l=[]
+l.append(a)
+l.append(b)
+l.append(c)
+# print(l)
+c=max(l)
+l.remove(c)
+print(max(l))
